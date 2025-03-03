@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розрахунок трикутника</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        input, select, button { margin: 5px; padding: 10px; }
+        #result { margin-top: 20px; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <h2>Калькулятор прямокутного трикутника</h2>
+    <p>Введіть два значення та виберіть їх типи:</p>
+    
+    <input type="number" id="value1" placeholder="Значення 1">
+    <select id="type1">
+        <option value="leg">Катет</option>
+        <option value="hypotenuse">Гіпотенуза</option>
+        <option value="adjacent angle">Прилеглий кут</option>
+        <option value="opposite angle">Протилежний кут</option>
+        <option value="angle">Гострий кут</option>
+    </select>
+    
+    <input type="number" id="value2" placeholder="Значення 2">
+    <select id="type2">
+        <option value="leg">Катет</option>
+        <option value="hypotenuse">Гіпотенуза</option>
+        <option value="adjacent angle">Прилеглий кут</option>
+        <option value="opposite angle">Протилежний кут</option>
+        <option value="angle">Гострий кут</option>
+    </select>
+    
+    <button onclick="calculateTriangle()">Обчислити</button>
+
+    <div id="result"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
