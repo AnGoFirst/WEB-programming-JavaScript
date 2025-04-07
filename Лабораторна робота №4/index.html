@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сортування</title>
+</head>
+<body>
+    <label>Введіть цілі числа через кому: </label>
+    <input type="text" id="arrayInput">
+    <br>
+    <label>Метод сортування:</label>
+    <select id="sortMethod">
+        <option value="sortExchange">Обміну</option>
+        <option value="sortMinElements">Мінімальних елементів</option>
+        <option value="sortInserts">Вставок</option>
+        <option value="sortShell">Шелла</option>
+        <option value="sortHoare">Хоара</option>
+    </select>
+    <br>
+    <label>
+        <input type="checkbox" id="ascending" checked> За зростанням
+    </label>
+    <br>
+    <button onclick="sortArray()">Сортувати</button>
+    <h2>Результат:</h2>
+    <div id="output"></div>
+
+    <script src="script.js"></script>
+    <script>
+        function sortArray() {
+            let input = document.getElementById('arrayInput').value;
+            let numbers = input.split(',').map(n => n.trim() === '' ? undefined : Number(n.trim()));
+            let method = document.getElementById('sortMethod').value;
+            let ascending = document.getElementById('ascending').checked;
+            
+            let result = SortingLibrary[method](numbers, ascending);
+            document.getElementById('output').innerText = `Вхідний масив: ${JSON.stringify(numbers)}\nВідсортований масив: ${JSON.stringify(result)}`;
+        }
+    </script>
+</body>
+</html>
