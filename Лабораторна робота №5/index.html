@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Clicker</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    #gameArea {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      border: 2px solid #ccc;
+      margin-top: 20px;
+      overflow: hidden;
+    }
+    #square {
+      position: absolute;
+      display: none;
+    }
+    .controls {
+      margin-bottom: 10px;
+    }
+    select, button {
+      padding: 5px;
+      margin: 0 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Clicker</h1>
+  <div class="controls">
+    <label>Складність:
+      <select id="difficulty">
+        <option value="">---</option>
+        <option value="easy">Легка</option>
+        <option value="medium">Середня</option>
+        <option value="hard">Важка</option>
+      </select>
+    </label>
+
+    <label>Колір:
+      <select id="color">
+        <option value="">---</option>
+        <option value="blue">Синій</option>
+        <option value="green">Зелений</option>
+        <option value="red">Червоний</option>
+        <option value="yellow">Жовтий</option>
+      </select>
+    </label>
+
+    <button id="startBtn">Старт</button>
+  </div>
+
+  <div>Рахунок: <span id="score">0</span></div>
+  <div id="gameArea">
+    <div id="square"></div>
+  </div>
+
+  <script>
+    const gameArea = document.getElementById('gameArea');
+    const square = document.getElementById('square');
+    const startBtn = document.getElementById('startBtn');
+    const difSelect = document.getElementById('difficulty');
+    const colSelect = document.getElementById('color');
+    const scoreEl = document.getElementById('score');
+
+    let score = 0;
+    let timeout;
+    let settings = {};
+    let lastX = 0;
+    let lastY = 0;
+
+    const difficulties = {
+      easy: { size: 100, timeout: 1500, range: 250 },
+      medium: { size: 75, timeout: 1000, range: 350 },
+      hard: { size: 50, timeout: 750, range: 450 }
+    };
+
+    function randomPos(range, size) {
+      let maxX = gameArea.clientWidth - size;
+      let maxY = gameArea.clientHeight - size;
+
+      let x = Math.min(maxX, Math.max(0, lastX + (Math.random() * range - range / 2)));
+      let y = Math.min(maxY, Math.max(0, lastY + (Math.random() * range - range / 2)));
+
+      lastX = x;
+      lastY = y;
+
+      return { x, y };
+    }
+
+    function endGame() {
+      square.style.display = 'none';
+      alert(`Game over! Ваш рахунок: ${score}`);
+    }
+
+    function showSquare() {
+      const pos = randomPos(settings.range, settings.size);
+      square.style.width = settings.size + 'px';
+      square.style.height = settings.size + 'px';
+      square.style.backgroundColor = settings.color;
+      square.style.left = pos.x + 'px';
+      square.style.top = pos.y + 'px';
+      square.style.display = 'block';
+
+      clearTimeout(timeout);
+      timeout = setTimeout(endGame, settings.timeout);
+    }
+
+    square.onclick = () => {
+      score += 5;
+      scoreEl.textContent = score;
+      showSquare();
+    };
+
+    startBtn.onclick = () => {
+      const difficulty = difSelect.value;
+      const color = colSelect.value;
+      if (!difficulty || !color) return;
+
+      settings = { ...difficulties[difficulty], color };
+      score = 0;
+      scoreEl.textContent = score;
+      lastX = gameArea.clientWidth / 2;
+      lastY = gameArea.clientHeight / 2;
+      showSquare();
+    };
+  </script>
+</body>
+</html>
