@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: slategrey;
+    color: white;
+  }
+  #grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5, 60px);
+    gap: 5px;
+    margin: 20px auto;
+  }
+  button.cell {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    border: none;
+    background-color: cadetblue;
+  }
+  button.cell.on {
+    background-color: goldenrod;
+  }
+  #controls button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+  }
