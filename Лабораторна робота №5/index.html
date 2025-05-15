@@ -59,6 +59,7 @@
   </div>
 
   <div>Рахунок: <span id="score">0</span></div>
+  <div>Час: <span id="timeLeft">0.0</span> с</div>
   <div id="gameArea">
     <div id="square"></div>
   </div>
@@ -70,12 +71,15 @@
     const difSelect = document.getElementById('difficulty');
     const colSelect = document.getElementById('color');
     const scoreEl = document.getElementById('score');
+    const timeLeftEl = document.getElementById('timeLeft');
 
     let score = 0;
     let timeout;
     let settings = {};
     let lastX = 0;
     let lastY = 0;
+    let cdInterval;
+    let cdStartTime;
 
     const difficulties = {
       easy: { size: 100, timeout: 1500, range: 250 },
@@ -96,9 +100,27 @@
       return { x, y };
     }
 
+    function startTimer(duration) {
+      clearInterval(cdInterval);
+      cdStartTime = Date.now();
+
+      cdInterval = setInterval(() => {
+        const elapsed = Date.now() - cdStartTime;
+        const remaining = Math.max(0, duration - elapsed);
+
+        timeLeftEl.textContent = (remaining / 1000).toFixed(1);
+
+        if (remaining <= 0) {
+          clearInterval(cdInterval);
+        }
+      }, 50);
+    }
+
     function endGame() {
       square.style.display = 'none';
       alert(`Game over! Ваш рахунок: ${score}`);
+      clearInterval(cdInterval);
+      timeLeftEl.textContent = '0.0';
     }
 
     function showSquare() {
@@ -112,6 +134,8 @@
 
       clearTimeout(timeout);
       timeout = setTimeout(endGame, settings.timeout);
+      
+      startTimer(settings.timeout);
     }
 
     square.onclick = () => {
