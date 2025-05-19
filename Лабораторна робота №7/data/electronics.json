@@ -1,0 +1,41 @@
+{
+  "categoryName": "Електроніка",
+  "shortname": "electronics",
+  "items": [
+    {
+      "id": 1,
+      "name": "Смартфон",
+      "shortname": "smartphone",
+      "description": "",
+      "price": "7500₴"
+    },
+    {
+      "id": 2,
+      "name": "Планшет",
+      "shortname": "tablet",
+      "description": "",
+      "price": "10000₴"
+    },
+    {
+      "id": 3,
+      "name": "Навушники",
+      "shortname": "headphones",
+      "description": "",
+      "price": "1500₴"
+    },
+	{
+      "id": 4,
+      "name": "Клавіатура",
+      "shortname": "keyboard",
+      "description": "",
+      "price": "3000₴"
+    },
+	{
+      "id": 5,
+      "name": "ПК",
+      "shortname": "PC",
+      "description": "",
+      "price": "35000₴"
+    }
+  ]
+}

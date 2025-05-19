@@ -1,0 +1,34 @@
+{
+  "categoryName": "Спорт",
+  "shortname": "sports",
+  "items": [
+    {
+      "id": 1,
+      "name": "Гантеля 16 кг",
+      "shortname": "dumbbell",
+      "description": "",
+      "price": "1300₴"
+    },
+    {
+      "id": 2,
+      "name": "Еспандер",
+      "shortname": "expander",
+      "description": "",
+      "price": "300₴"
+    },
+    {
+      "id": 3,
+      "name": "Велосипед",
+      "shortname": "bicycle",
+      "description": "",
+      "price": "16000₴"
+    },
+	{
+      "id": 4,
+      "name": "М'яч баскетбольний",
+      "shortname": "basketballBall",
+      "description": "",
+      "price": "1000₴"
+    }
+  ]
+}

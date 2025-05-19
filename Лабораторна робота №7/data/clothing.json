@@ -1,0 +1,41 @@
+{
+  "categoryName": "Одяг",
+  "shortname": "clothing",
+  "items": [
+    {
+      "id": 1,
+      "name": "Кросівки",
+      "shortname": "sneakers",
+      "description": "",
+      "price": "5500₴"
+    },
+    {
+      "id": 2,
+      "name": "Сорочка",
+      "shortname": "shirt",
+      "description": "",
+      "price": "1000₴"
+    },
+    {
+      "id": 3,
+      "name": "Футболка",
+      "shortname": "t-shirt",
+      "description": "",
+      "price": "2000₴"
+    },
+	{
+      "id": 4,
+      "name": "Штани",
+      "shortname": "pants",
+      "description": "",
+      "price": "4000₴"
+    },
+	{
+      "id": 5,
+      "name": "Шапка",
+      "shortname": "hat",
+      "description": "",
+      "price": "800₴"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "categoryName": "Книги",
+  "shortname": "books",
+  "items": [
+    {
+      "id": 1,
+      "name": "The Witcher Sword of Destiny | Andrzej Sapkowski",
+      "shortname": "witcher",
+      "description": "",
+      "price": "350₴"
+    },
+    {
+      "id": 2,
+      "name": "Into the Wild | Jon Krakauer",
+      "shortname": "intoTheWild",
+      "description": "",
+      "price": "540₴"
+    },
+    {
+      "id": 3,
+      "name": "Verity | Colleen Hoover",
+      "shortname": "verity",
+      "description": "",
+      "price": "590₴"
+    },
+	{
+      "id": 4,
+      "name": "Thinking, Fast and Slow | Daniel Kahneman",
+      "shortname": "thinking",
+      "description": "",
+      "price": "300₴"
+    }
+  ]
+}

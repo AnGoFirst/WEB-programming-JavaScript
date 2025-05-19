@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Електроніка",
+    "shortname": "electronics",
+    "notes": ""
+  },
+  {
+    "id": 2,
+    "name": "Книги",
+    "shortname": "books",
+    "notes": ""
+  },
+  {
+    "id": 3,
+    "name": "Одяг",
+    "shortname": "clothing",
+    "notes": ""
+  },
+  {
+    "id": 4,
+    "name": "Спорт",
+    "shortname": "sports",
+    "notes": ""
+  },
+  {
+    "id": 5,
+    "name": "Інструменти",
+    "shortname": "tools",
+    "notes": ""
+  }
+]

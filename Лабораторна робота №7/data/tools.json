@@ -1,0 +1,41 @@
+{
+  "categoryName": "Інструменти",
+  "shortname": "tools",
+  "items": [
+    {
+      "id": 1,
+      "name": "Набір інструментів",
+      "shortname": "toolKit",
+      "description": "",
+      "price": "600₴"
+    },
+    {
+      "id": 2,
+      "name": "Набір ключів",
+      "shortname": "keySet",
+      "description": "",
+      "price": "300₴"
+    },
+    {
+      "id": 3,
+      "name": "Степлер",
+      "shortname": "stapler",
+      "description": "",
+      "price": "650₴"
+    },
+	{
+      "id": 4,
+      "name": "Пістолет для герметика",
+      "shortname": "sealantGun",
+      "description": "",
+      "price": "800₴"
+    },
+	{
+      "id": 5,
+      "name": "Дриль-шурупокрут",
+      "shortname": "screwdriver",
+      "description": "",
+      "price": "2000₴"
+    }
+  ]
+}
