@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Сторінка</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav>
+    <div class="hamburger" onclick="toggleMenu()">≡</div>
+    <ul class="menu">
+      <li><a href="#">Головна</a></li>
+      <li><a href="#">Про нас</a></li>
+      <li><a href="#">Послуги</a></li>
+      <li><a href="#">Контакти</a></li>
+    </ul>
+  </nav>
+
+  <div class="carousel">
+    <div class="slides">
+      <img src="https://place-hold.it/500x300/1c6b59/000000?text=1" class="slide active"/>
+      <img src="https://place-hold.it/500x300/3e08a8/000000?text=2" class="slide"/>
+      <img src="https://place-hold.it/500x300/125287/000000?text=3" class="slide"/>
+    </div>
+    <button class="prev" onclick="changeSlide(-1)">‹</button>
+    <button class="next" onclick="changeSlide(1)">›</button>
+    <div class="dots"></div>
+  </div>
+
+  <div class="large-images">
+    <img src="https://place-hold.it/200x200/daa520/696969?text=Large1"/>
+    <img src="https://place-hold.it/200x200/daa520/696969?text=Large2"/>
+    <img src="https://place-hold.it/200x200/daa520/696969?text=Large3"/>
+  </div>
+
+  <div class="medium-images">
+    <img src="https://place-hold.it/200x200/daa520/696969?text=Medium1"/>
+    <img src="https://place-hold.it/200x200/daa520/696969?text=Medium2"/>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
