@@ -3,7 +3,7 @@ let car1 = new Object();
 car1.color = "magenta";
 car1.maxSpeed = 180;
 car1.driver = {
-  name: "Прізвище Ім'я",
+  name: "Айб Олександр",
   category: "C",
   personalLimitations: "No driving at night"
 };
@@ -15,7 +15,7 @@ let car2 = {
   color: "yellow",
   maxSpeed: 200,
   driver: {
-    name: "Прізвище Ім'я",
+    name: "Айб Олександр",
     category: "B",
     personalLimitations: null
   },
@@ -65,11 +65,11 @@ Truck.prototype.AssignDriver = function(name, nightDriving, experience) {
 
 // завдання 1.2.10
 let truck1 = new Truck("lime", 7000, 75, "MAN", "TGX");
-truck1.AssignDriver("Прізвище Ім'я", true, 5);
+truck1.AssignDriver("Айб Олександр", true, 5);
 truck1.trip();
 
 let truck2 = new Truck("grey", 6000, 80, "Volvo", "FH");
-truck2.AssignDriver("Прізвище Ім'я", false, 3);
+truck2.AssignDriver("Айб Олександр", false, 3);
 truck2.trip();
 
 // завдання 1.2.12 – 1.2.15
